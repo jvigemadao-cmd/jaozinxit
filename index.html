@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Menoxit</title>
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: #00fff7;
+  font-family: Arial;
+}
+
+.panel {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 260px;
+  padding: 15px;
+  border: 2px solid #00fff7;
+  box-shadow: 0 0 20px #00fff7;
+  background: rgba(0,0,0,0.7);
+}
+
+h2 {
+  text-align: center;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.slider {
+  width: 100%;
+}
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: #00fff7;
+}
+
+.crosshair::before {
+  width: 2px;
+  height: 25px;
+  left: 11px;
+}
+
+.crosshair::after {
+  width: 25px;
+  height: 2px;
+  top: 11px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+  <h2>Menoxit</h2>
+
+  <div class="toggle">
+    <span>Aimbot</span>
+    <input type="checkbox">
+  </div>
+
+  <div class="toggle">
+    <span>ESP</span>
+    <input type="checkbox">
+  </div>
+
+  <div>
+    Aim FOV
+    <input type="range" min="0" max="100" class="slider">
+  </div>
+
+  <div class="toggle">
+    <span>No Recoil</span>
+    <input type="checkbox">
+  </div>
+
+  <div class="toggle">
+    <span>Aim Lock</span>
+    <input type="checkbox">
+  </div>
+
+</div>
+
+<div class="crosshair"></div>
+
+</body>
+</html>
